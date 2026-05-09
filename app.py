@@ -58,7 +58,7 @@ with st.sidebar:
     default_link = "https://docs.google.com/spreadsheets/d/1-ZQcx1OYmIQgijsQkPBdNPCX-LL1Y9pK/edit?usp=drive_link"
     lhs_link = st.text_input("🔗 ગૂગલ ડ્રાઇવ લિંક (LHS2.xlsx)", value=default_link)
     
-    template_file = st.file_uploader("📂 ટેમ્પલેટ અપલોડ કરો (LOT MASTER.xlsx)", type="xlsx")
+    template_file = "LOT MASTER.xlsx"
     
     st.markdown("---")
     ndt_type = st.radio("🎯 NDT Type પસંદ કરો", ["RT", "DPT"])
