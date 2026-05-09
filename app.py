@@ -5,7 +5,16 @@ from openpyxl.styles import Alignment
 import io
 import requests
 from datetime import datetime
+import streamlit as st
 
+def check_password():
+    if "password_correct" not in st.session_state:
+        st.text_input("પાસવર્ડ નાખો", type="password", on_change=lambda: st.session_state.update({"password_correct": st.session_state.pwd == st.secrets["password"]}), key="pwd")
+        return False
+    return st.session_state["password_correct"]
+
+if not check_password():
+    st.stop() # પાસવર્ડ સાચો ન હોય ત્યાં સુધી નીચેનો કોડ ન ચાલે
 # --- પેજ સેટઅપ ---
 st.set_page_config(page_title="AIPL LOT Generator", layout="wide")
 st.title("📊 ક્વોલિટી ડેટા: LOT એક્સેલ જનરેટર")
