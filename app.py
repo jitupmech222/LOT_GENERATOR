@@ -150,9 +150,10 @@ if st.button("🚀 રિપોર્ટ જનરેટ કરો"):
                             fmt_ws[f"L{row_out}"].value = fmt_date(lhs_ws[f"AB{r}"].value)
                             fmt_ws[f"M{row_out}"].value = "RT" if str(lhs_ws[f"J{r}"].value) == "BW" else "DPT"
                             
-                            rep_no = str(lhs_ws[f"{col_report}{r}"].value or "")
-                            xr_no = str(lhs_ws[f"AJ{r}"].value or "")
-                            fmt_ws[f"N{row_out}"].value = f"{rep_no} ({xr_no})" if rep_no and xr_no else rep_no
+                            report_no = blank_if_na_or_empty(lhs_ws[f"{col_report}{r}"].value)
+                            xr_no = blank_if_na_or_empty(lhs_ws[f"AJ{r}"].value)
+
+                            fmt_ws[f"N{row_out}"].value = f"{report_no} ({xr_no})" if report_no and xr_no else report_no
                             
                             fmt_ws[f"O{row_out}"].value = fmt_date(lhs_ws[f"{col_date}{r}"].value)
                             fmt_ws[f"Q{row_out}"].value = fmt_date(lhs_ws[f"AR{r}"].value)
