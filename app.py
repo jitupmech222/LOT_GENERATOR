@@ -88,8 +88,8 @@ def check_password():
 if not check_password(): st.stop()
 
 # --- ૪. પેજ સેટઅપ ---
-st.set_page_config(page_title="MPC Quality Dashboard", layout="wide")
-st.title("📊 MPC Quality Dashboard")
+st.set_page_config(page_title="Quality Dashboard", layout="wide")
+st.title("📊 Quality Dashboard")
 
 # છુપાવેલી લિંક્સ અને ટેમ્પલેટ
 lhs_link = "https://docs.google.com/spreadsheets/d/1-ZQcx1OYmIQgijsQkPBdNPCX-LL1Y9pK/edit?usp=drive_link"
