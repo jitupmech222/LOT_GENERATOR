@@ -68,10 +68,8 @@ st.title("📊 ક્વોલિટી ડેટા: LOT એક્સેલ જ
 # --- સાઇડબાર ઇનપુટ્સ ---
 with st.sidebar:
     st.header("⚙️ સેટિંગ્સ")
-    default_link = "https://docs.google.com/spreadsheets/d/1-ZQcx1OYmIQgijsQkPBdNPCX-LL1Y9pK/edit?usp=drive_link"
-    lhs_link = st.text_input("🔗 ગૂગલ ડ્રાઇવ લિંક (LHS2.xlsx)", value=default_link)
-    
-    # ઇનબિલ્ટ ટેમ્પલેટ ફાઇલ
+    # આ લાઇન સાઇડબારની બહાર લખવી જેથી તે દેખાય નહીં
+    lhs_link = "https://docs.google.com/spreadsheets/d/1-ZQcx1OYmIQgijsQkPBdNPCX-LL1Y9pK/edit?usp=drive_link"
     template_file = "LOT MASTER.xlsx"
     
     st.markdown("---")
