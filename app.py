@@ -54,7 +54,7 @@ def get_web_workbook(url):
 # --- લોગિન સિસ્ટમ ---
 def check_password():
     if "password_correct" not in st.session_state:
-        st.text_input("પાસવર્ડ નાખો", type="password", on_change=lambda: st.session_state.update({"password_correct": st.session_state.pwd == st.secrets["password"]}), key="pwd")
+        st.text_input("Please Enter Password", type="password", on_change=lambda: st.session_state.update({"password_correct": st.session_state.pwd == st.secrets["password"]}), key="pwd")
         return False
     return st.session_state["password_correct"]
 
@@ -63,7 +63,7 @@ if not check_password():
 
 # --- પેજ સેટઅપ ---
 st.set_page_config(page_title="AIPL LOT Generator", layout="wide")
-st.title("📊 ક્વોલિટી ડેટા: LOT એક્સેલ જનરેટર")
+st.title("📊 Quality Data: RT/DPT LOT")
 
 # --- સાઇડબાર ઇનપુટ્સ ---
 with st.sidebar:
