@@ -67,7 +67,7 @@ st.title("📊 Quality Data: RT/DPT LOT")
 
 # --- સાઇડબાર ઇનપુટ્સ ---
 with st.sidebar:
-    st.header("⚙️ સેટિંગ્સ")
+    st.header(" ")
     # આ લાઇન સાઇડબારની બહાર લખવી જેથી તે દેખાય નહીં
     lhs_link = "https://docs.google.com/spreadsheets/d/1P1-U_1rhYJ28drrdGgwKBVntP9Uh4nlQ/edit?usp=drive_link&ouid=112560164772488108224&rtpof=true&sd=true"
     template_file = "LOT MASTER.xlsx"
