@@ -81,7 +81,7 @@ with st.sidebar:
         eb_joint = st.radio("🛠️ Joint Type EB છે?", ["Y", "N"])
 
 # --- મુખ્ય લોજિક ---
-if st.button("🚀 રિપોર્ટ જનરેટ કરો"):
+if st.button("🚀 Click to generate report"):
     if not lhs_link or not lot_no:
         st.error("⚠️ લિંક અને LOT નંબર જરૂરી છે.")
     else:
@@ -168,7 +168,7 @@ if st.button("🚀 રિપોર્ટ જનરેટ કરો"):
                             fmt_wb.save(output)
                             output.seek(0)
                             
-                            st.success(f"✅ તૈયાર! {len(filtered_rows)} રેકોર્ડ્સ.")
-                            st.download_button(label="📥 એક્સેલ રિપોર્ટ ડાઉનલોડ કરો", data=output, file_name=f"{ndt_type}_LOT_{lot_no}.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                            st.success(f"✅ Ready! {len(filtered_rows)} records.")
+                            st.download_button(label="📥 Download Excel Report", data=output, file_name=f"{ndt_type}_LOT_{lot_no}.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
                         except Exception as e:
                             st.error(f"❌ ટેમ્પલેટ લોડ કરવામાં ભૂલ: {e}")
