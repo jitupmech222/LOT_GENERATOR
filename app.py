@@ -73,8 +73,8 @@ with st.sidebar:
     template_file = "LOT MASTER.xlsx"
     
     st.markdown("---")
-    ndt_type = st.radio("🎯 NDT Type પસંદ કરો", ["RT", "DPT"])
-    lot_no = st.text_input("🔢 LOT નંબર નાખો")
+    ndt_type = st.radio("🎯 Select NDT Type ", ["RT", "DPT"])
+    lot_no = st.text_input("🔢 Please Enter LOT Number ")
     
     eb_joint = "N"
     if ndt_type == "DPT":
@@ -85,7 +85,7 @@ if st.button("🚀 રિપોર્ટ જનરેટ કરો"):
     if not lhs_link or not lot_no:
         st.error("⚠️ લિંક અને LOT નંબર જરૂરી છે.")
     else:
-        with st.spinner("⏳ ડેટા પ્રોસેસ થઈ રહ્યો છે..."):
+        with st.spinner("⏳ Please wait, processing your data..."):
             lhs_wb = get_web_workbook(lhs_link)
             
             if lhs_wb:
